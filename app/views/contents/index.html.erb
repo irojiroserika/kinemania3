@@ -1,2 +1,12 @@
 <h1>Contents#index</h1>
 <p>Find me in app/views/contents/index.html.erb</p>
+
+<h1>視聴済みの作品</h1>
+
+  <p>
+    <% @contents.each do |content| %>
+      <%= link_to(content.name, "/contents/#{content.id}") %>
+      <%= content.created_at %>
+      <br>
+    <% end %>
+  </p>

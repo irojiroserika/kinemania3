@@ -1,0 +1,13 @@
+<h1>映画の詳細ページ</h1>
+
+<%= @content.name %>
+
+<br>
+<%= link_to("編集","/contents/#{@content.id}/edit") %>
+
+<%= form_tag("/actors/create") do %>
+  <h1>Cast</h1>
+  <textarea name ="name"></textarea> 
+  
+  <input type="submit" value="Cast登録" >
+<% end %>

@@ -1,2 +1,9 @@
-<h1>Actors#index</h1>
-<p>Find me in app/views/actors/index.html.erb</p>
+
+<p>Actorのリストを表示する</p>
+<p>
+    <% @actors.each do |actor| %>
+      <%= link_to(actor.name, "/actors/#{actor.id}") %>
+      <%= actor.created_at %>
+      <br>
+    <% end %>
+  </p>

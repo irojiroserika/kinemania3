@@ -10,6 +10,31 @@
   </head>
 
   <body>
+    
+    <header>
+      <div class="header-logo">
+        <%= link_to("kinemania", "/") %>
+      </div>
+      <ul class="header-menus">
+        <li>
+          <%= link_to("映画一覧", "/contents/index") %>
+        </li>
+        <li>
+          <%= link_to("新しく映画を見た", "/contents/new") %>
+        </li>
+        <li>
+          <%= link_to("Cast_list", "/actors/index") %>
+        </li>
+        <li>
+          <%= link_to("Cast_create", "/actors/new") %>
+        </li>
+      </ul>
+    </header>
+    <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>
