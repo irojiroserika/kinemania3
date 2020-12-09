@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   get 'actors/index'
-  get "actors/new" => "actors#new"
+  post "actors/new" => "actors#new"
   post "actors/create" => "actors#create"
+  get "actors/:id" => "actors#show"
+  
+  
   
   get 'contents/index' => "contents#index"
   get "contents/new" => "contents#new"

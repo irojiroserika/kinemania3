@@ -34,5 +34,12 @@ class ContentsController < ApplicationController
     end
   end
   
+  def grouping
+    @content = Content.find_by(id: params[:id])
+    @actor = Actor.new(name: params[:name])
+    @actor.contents << params[:id]
+    @actor.save
+  end
+  
 end
 

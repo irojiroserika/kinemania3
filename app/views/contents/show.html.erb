@@ -4,10 +4,24 @@
 
 <br>
 <%= link_to("編集","/contents/#{@content.id}/edit") %>
+<br>
+<% @content.actors.each do |actor| %>
+      <%= link_to(actor.name, "/actors/#{actor.id}") %>
+      <%= actor.created_at %>
+      <br>
+    <% end %>
 
 <%= form_tag("/actors/create") do %>
-  <h1>Cast</h1>
+  <h1>Castの作成と追加</h1>
   <textarea name ="name"></textarea> 
+  <textarea name ="id"><%= @content.id %></textarea> 
   
+  <input type="submit" value="Cast登録" >
+<% end %>
+
+<%= form_tag("/contents/grouping") do %>
+  <h1>Castの追加のみ</h1>
+  <textarea name ="name"></textarea> 
+  <textarea name ="name" ></textarea> 
   <input type="submit" value="Cast登録" >
 <% end %>

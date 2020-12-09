@@ -5,9 +5,23 @@ class ActorsController < ApplicationController
     @actors = Actor.all
   end
   
-  def create
-    @actor = Actor.new(name: params[:name])
-    @actor.save
-    redirect_to("/actors/index")
+  def show
+    @actor = Actor.find_by(id: params[:id])
   end
+  
+  
+    
+  def create
+   @actor = Actor.new(name: params[:name])
+   @content =Content.find_by(id: params[:id])
+   @actor.contents << @content
+   @actor.save
+   redirect_to("/contents/#{@content.id}")
+  end
+  
+  
+ 
+ 
+  
+  
 end

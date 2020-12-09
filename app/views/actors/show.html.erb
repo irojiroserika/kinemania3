@@ -1,0 +1,12 @@
+<h1>Actorの詳細ページ</h1>
+
+<%= link_to(@actor.name, "/actors/#{@actor.id}") %>
+<br>
+      <% @actor.contents.each do |content| %>
+      <%= link_to(content.name, "/contents/#{content.id}") %>
+      <%= content.created_at %>
+      <br>
+    <% end %>
+<br>
+    
+
