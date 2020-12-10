@@ -18,8 +18,11 @@ class ContentsController < ApplicationController
   
   def create
     @content = Content.new(name: params[:name])
-    @content.save
-    redirect_to("/contents/#{@content.id}")
+    if @content.save
+      redirect_to("/contents/#{@content.id}")
+    else
+      redirect_to("/contents/#{@content.id}")
+    end
   end
   
   def update
