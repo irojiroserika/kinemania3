@@ -17,7 +17,7 @@ class ContentsController < ApplicationController
   end
   
   def create
-    @content = Content.new(name: params[:name])
+    @content = Content.new(name: params[:name],watchedday: params[:watchedday])
     if @content.save
       redirect_to("/contents/#{@content.id}")
     else
@@ -35,13 +35,6 @@ class ContentsController < ApplicationController
       @content = Content.find_by(id: params[:id])
       render("contents/edit")
     end
-  end
-  
-  def grouping
-    @content = Content.find_by(id: params[:id])
-    @actor = Actor.new(name: params[:name])
-    @actor.contents << params[:id]
-    @actor.save
   end
   
 end

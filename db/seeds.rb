@@ -9,23 +9,3 @@
 
 
 
-
-_actor1 = Actor.create(name: "芳根京子")
-_actor2 = Actor.create(name: "泉澤祐希")
-_actor3 = Actor.create(name: "桜田通")
-
-_content1 = Content.create(name: "私、定時で帰ります")
-_content2 = Content.create(name: "先輩と彼女")
-_content3 = Content.create(name: "表参道高校合唱部")
-
-
-_actor1.contents << _content2
-_actor1.contents << _content3
-_actor1.save
-
-_actor2.contents << _content1
-_actor2.contents << _content3
-_actor2.save
-
-_actor3.contents << _content1
-_actor3.save

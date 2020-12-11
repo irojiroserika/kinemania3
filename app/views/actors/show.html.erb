@@ -4,11 +4,15 @@
 <br>
 <h1>出演作品</h1>
 <br>
-      <% @actor.contents.each do |content| %>
-      <%= link_to(content.name, "/contents/#{content.id}") %>
-      <%= content.created_at %>
-      <br>
-　　　<% end %>
-<br>
-    
+<table border="2">
+  <tr>
+    <th>作品ID</th><th>作品名</th><th>視聴日時</th>
+  </tr>
+  <% @actor.contents.each do |content| %>
+  <tr>
+    <td><%= content.id %></td><td><%= link_to(content.name, "/contents/#{content.id}") %></td><td><%= content.watchedday.to_date %></td>
+  </tr>
+ 
+  <% end %>
+</table>
 
