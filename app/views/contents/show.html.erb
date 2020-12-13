@@ -1,5 +1,15 @@
 <h1>映画の詳細ページ</h1>
+<br>
 
+<%= form_tag("/actors/create") do %>
+  <h1>Castの作成と追加</h1>
+  <textarea name ="name"></textarea> 
+  
+  <input type = "hidden" name ="id" value="<%= @content.id %>"></textarea> 
+  
+  <input type="submit" value="Cast登録" >
+<% end %>
+<br>
 <%= @content.name %>
 
 <br>
@@ -19,16 +29,7 @@
 </table>
 
 <%= link_to("作品名の編集","/contents/#{@content.id}/edit") %>
-<br>
 
-<%= form_tag("/actors/create") do %>
-  <h1>Castの作成と追加</h1>
-  <textarea name ="name"></textarea> 
-  
-  <input type = "hidden" name ="id" value="<%= @content.id %>"></textarea> 
-  
-  <input type="submit" value="Cast登録" >
-<% end %>
 
 
 
