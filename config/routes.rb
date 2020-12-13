@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   post "actors/new" => "actors#new"
   post "actors/create" => "actors#create"
   get "actors/:id" => "actors#show"
-  
-  
+  get "actors/:id/edit" => "actors#edit"
+  post "actors/:id/update" => "actors#update"
   
   get 'contents/index' => "contents#index"
   get "contents/new" => "contents#new"

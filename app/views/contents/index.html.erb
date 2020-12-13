@@ -10,7 +10,7 @@
   </tr>
   <% @contents.each do |content| %>
   <tr>
-    <td><%= content.id %></td><td><%= link_to(content.name, "/contents/#{content.id}") %></td><td><%= content.watchedday.to_date %></td>
+    <td><%= content.id %></td><td><%= link_to(content.name, "/contents/#{content.id}") %></td><td><%= content.watchedday %></td>
   </tr>
  
   <% end %>

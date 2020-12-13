@@ -9,7 +9,9 @@ class ActorsController < ApplicationController
     @actor = Actor.find_by(id: params[:id])
   end
   
-  
+  def edit
+    @actor = Actor.find_by(id: params[:id])
+  end
     
   def create
     @actor = Actor.new(name: params[:name])
@@ -26,6 +28,18 @@ class ActorsController < ApplicationController
     end
   end
   
+  def update
+    @actor = Actor.find_by(id: params[:id])
+    @actor.name = params[:name]
+    if @actor.save
+      flash[:notice] = "出演者の名前を編集しました"
+      redirect_to("/actors/#{@actor.id}")
+    else
+      @content = Actor.find_by(id: params[:id])
+      render("actors/edit")
+    end
+  end
+    
   
  
  
