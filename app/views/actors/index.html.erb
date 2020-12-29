@@ -3,11 +3,11 @@
 
   <table border="2">
   <tr>
-    <th>出演者ID</th><th>名前</th><th>出演回数</th>
+    <th>出演者ID</th><th>名前</th><th>出演回数</th><th>画像</th>
   </tr>
   <% @actors.each do |actor| %>
   <tr>
-    <td><%= actor.id %></td><td><%= link_to(actor.name, "/actors/#{actor.id}") %></td><td><%= actor.contents.count %></td>
+    <td><%= actor.id %></td><td><%= link_to(actor.name, "/actors/#{actor.id}") %></td><td><%= actor.contents.count %></td><td><img src="<%= "/actor_images/#{actor.image_name}" %>"></td>
   </tr>
  
   <% end %>

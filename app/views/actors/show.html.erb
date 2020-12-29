@@ -1,9 +1,12 @@
 <h1><%= link_to(@actor.name, "/actors/#{@actor.id}") %></h1>
 
-<%= form_tag("/actors/#{@actor.id}/update") do %>
+<%= form_tag("/actors/#{@actor.id}/update",{multipart: true}) do %>
   <textarea name ="name"><%= @actor.name %></textarea>
+  <input name ="image_name" type="file">
   <input type="submit" value="更新">
 <% end %>
+<br>
+<img src="<%= "/actor_images/#{@actor.image_name}" %>">
 <br>
 <h1>出演作品</h1>
 <br>

@@ -14,7 +14,7 @@ class ActorsController < ApplicationController
   end
     
   def create
-    @actor = Actor.new(name: params[:name])
+    @actor = Actor.new(name: params[:name],image_name: "default_actor_image.jpg")
     @content =Content.find_by(id: params[:id])
     @actor.contents << @content
     if @actor.save
@@ -31,6 +31,11 @@ class ActorsController < ApplicationController
   def update
     @actor = Actor.find_by(id: params[:id])
     @actor.name = params[:name]
+    if params[:image_name]
+      @actor.image_name = "#{@actor.id}.jpg"
+      image_name = params[:image_name]
+      File.binwrite("public/actor_images/#{@actor.image_name}", image_name.read)
+    end
     if @actor.save
       flash[:notice] = "出演者の名前を編集しました"
       redirect_to("/actors/#{@actor.id}")
