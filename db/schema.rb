@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_12_115148) do
+ActiveRecord::Schema.define(version: 2020_12_29_090431) do
 
   create_table "actors", force: :cascade do |t|
     t.string "name"
@@ -43,6 +43,13 @@ ActiveRecord::Schema.define(version: 2020_12_12_115148) do
     t.index ["appear_id"], name: "index_relationships_on_appear_id"
     t.index ["cast_id", "appear_id"], name: "index_relationships_on_cast_id_and_appear_id", unique: true
     t.index ["cast_id"], name: "index_relationships_on_cast_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "content_actors", "actors"

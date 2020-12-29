@@ -39,10 +39,6 @@ class ActorsController < ApplicationController
       render("actors/edit")
     end
   end
-    
   
  
- 
-  
-  
-end
+end 
