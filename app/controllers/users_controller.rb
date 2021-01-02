@@ -8,7 +8,11 @@ class UsersController < ApplicationController
   
   def create
     @user = User.new(name: params[:name],email: params[:email])
-    @user.save
+    if @user.save
+      redirect_to("/contents/new")
+    else
+      redirect_to("/users/new")
+    end
     
   end
 
