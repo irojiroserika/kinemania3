@@ -7,7 +7,7 @@
   </tr>
   <% @actors.each do |actor| %>
   <tr>
-    <td><%= actor.id %></td><td><%= link_to(actor.name, "/actors/#{actor.id}") %></td><td><%= actor.contents.count %></td><td><img src="<%= "/actor_images/#{actor.image_name}" %>"></td>
+    <td><%= actor.id %></td><td><%= link_to(actor.name, "/actors/#{actor.id}") %></td><td><%= actor.contents.count %></td><td><img src="<%= "/actor_images/#{actor.image_name}" %>" width="200" height="auto"></td>
   </tr>
  
   <% end %>

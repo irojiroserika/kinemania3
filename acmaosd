@@ -1,0 +1,156 @@
+[33mcommit 9bfb297eab002df5f5e9ae36ca6e8c82fa146a4c[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31mheroku/master[m[33m)[m
+Author: irojiroserika <irojiroserika@gmail.com>
+Date:   Sun Jan 3 10:06:15 2021 +0000
+
+    remove_error
+
+[33mcommit 63def6c1288649cc2afac51e288bce23d3c12c3e[m
+Author: irojiroserika <irojiroserika@gmail.com>
+Date:   Sun Jan 3 09:49:43 2021 +0000
+
+    remove_error
+
+[33mcommit 302a0ca017a801c8421ed565b2c6d708ffe66a34[m
+Author: irojiroserika <irojiroserika@gmail.com>
+Date:   Sun Jan 3 09:37:49 2021 +0000
+
+    remove_error
+
+[33mcommit 1e0e3f35edd3b6128f7d920a780f70aac9257668[m
+Author: irojiroserika <irojiroserika@gmail.com>
+Date:   Sun Jan 3 09:18:10 2021 +0000
+
+    heroku_deploy_v1
+
+[33mcommit 72e2bed2f72f59139332717672527cca45a32cf4[m
+Author: irojiroserika <irojiroserika@gmail.com>
+Date:   Sun Jan 3 05:44:55 2021 +0000
+
+    image_resize
+
+[33mcommit d05ffa0d317610e88acacc8419429884cea8fe96[m
+Author: irojiroserika <irojiroserika@gmail.com>
+Date:   Sun Jan 3 03:05:01 2021 +0000
+
+    dummy
+
+[33mcommit ace262ff47d138390587a0e51278d6a8b90bd9e3[m
+Author: irojiroserika <irojiroserika@gmail.com>
+Date:   Sat Jan 2 10:19:36 2021 +0000
+
+    install_bcrypt
+
+[33mcommit bbad755c3c79caa6537990f1bbc3659b2a4368a6[m
+Author: irojiroserika <irojiroserika@gmail.com>
+Date:   Tue Dec 29 10:25:31 2020 +0000
+
+    create_actor_image
+
+[33mcommit 967154af4ff9a76650f823bb50abba74f335947c[m
+Author: irojiroserika <irojiroserika@gmail.com>
+Date:   Tue Dec 29 09:46:27 2020 +0000
+
+    create_user_create
+
+[33mcommit 6e07e5ab5bf90dd295e77e9d60421d22ec11e2f3[m
+Author: irojiroserika <irojiroserika@gmail.com>
+Date:   Tue Dec 29 09:05:32 2020 +0000
+
+    generate_user_model
+
+[33mcommit eecbbdc0abe1d45ce60dff2e169252d96e6cd84b[m
+Author: irojiroserika <irojiroserika@gmail.com>
+Date:   Sun Dec 27 06:12:49 2020 +0000
+
+    test
+
+[33mcommit 3f168825edecf6824560744e823025bb15ff2d2a[m
+Author: irojiroserika <irojiroserika@gmail.com>
+Date:   Sun Dec 27 04:04:09 2020 +0000
+
+    Update Gemfile for Heroku
+
+[33mcommit 67167dd9769d0d0f0728ea9c45d2515c1d827358[m
+Author: Ubuntu <ubuntu@ip-172-31-4-226.us-east-2.compute.internal>
+Date:   Mon Dec 21 11:28:20 2020 +0000
+
+    rerewrite_to_d
+
+[33mcommit df254bc4dc036d50904f6c45e55f36c974c27570[m
+Author: Ubuntu <ubuntu@ip-172-31-4-226.us-east-2.compute.internal>
+Date:   Mon Dec 21 11:01:50 2020 +0000
+
+    update_watchedday
+
+[33mcommit a66edf49e1f72782b67d9ed0663696fc08a0097f[m
+Author: Ubuntu <ubuntu@ip-172-31-4-226.us-east-2.compute.internal>
+Date:   Sun Dec 13 13:18:57 2020 +0000
+
+    update_contents_view
+
+[33mcommit a2434a34e179e463bda40aeaa390daf10e558c02[m
+Author: Ubuntu <ubuntu@ip-172-31-4-226.us-east-2.compute.internal>
+Date:   Sun Dec 13 12:17:14 2020 +0000
+
+    heroku_deploy
+
+[33mcommit 05edae67d376e6f3c112f7a161ae8701f1edf1f8[m
+Author: Ubuntu <ubuntu@ip-172-31-4-226.us-east-2.compute.internal>
+Date:   Sun Dec 13 00:54:44 2020 +0000
+
+    start_201213
+
+[33mcommit 97c7ce637af280c39b50079e7c3a57705e5739c5[m
+Author: Ubuntu <ubuntu@ip-172-31-4-226.us-east-2.compute.internal>
+Date:   Fri Dec 11 14:14:43 2020 +0000
+
+    adjust_views
+
+[33mcommit 8b012c8c30990727bfd6f567f304c6f748238479[m
+Author: Ubuntu <ubuntu@ip-172-31-4-226.us-east-2.compute.internal>
+Date:   Thu Dec 10 14:42:32 2020 +0000
+
+    actor_to_content_relationship_test_completed
+
+[33mcommit 028f37edceb8e828a9003ff7e1f7338263789a7d[m
+Merge: 0f2818d 988906d
+Author: Ubuntu <ubuntu@ip-172-31-4-226.us-east-2.compute.internal>
+Date:   Wed Dec 9 14:55:31 2020 +0000
+
+    ss
+
+[33mcommit 0f2818d224013314064cfeb60449831c47c83a5c[m
+Author: Ubuntu <ubuntu@ip-172-31-4-226.us-east-2.compute.internal>
+Date:   Wed Dec 9 14:51:09 2020 +0000
+
+    complete_many_to_many_relation_201209
+
+[33mcommit 988906d45a5bd376055aaa7bcad545d0670eefca[m
+Author: Ubuntu <ubuntu@ip-172-31-4-226.us-east-2.compute.internal>
+Date:   Tue Dec 8 12:32:55 2020 +0000
+
+    create_relationshop_migration_file
+
+[33mcommit 2067ffce7f8ac7466dfdde2b8520995a75c76b41[m
+Author: Ubuntu <ubuntu@ip-172-31-4-226.us-east-2.compute.internal>
+Date:   Tue Dec 8 12:22:05 2020 +0000
+
+    complete_template_before_create_relationship_model
+
+[33mcommit 4f835abecf601af3e9dc5f60657dfcb011dbbfc8[m
+Author: Ubuntu <ubuntu@ip-172-31-4-226.us-east-2.compute.internal>
+Date:   Tue Dec 8 11:08:45 2020 +0000
+
+    create_home_contents_actors_controllers
+
+[33mcommit bf991286698db78bcda04961b64e588c67066fc6[m
+Author: Ubuntu <ubuntu@ip-172-31-4-226.us-east-2.compute.internal>
+Date:   Tue Dec 8 10:52:13 2020 +0000
+
+    Update Gemfile for Heroku
+
+[33mcommit 2dccf2b94e3d3b33e8ff97c27eacefa348b8573a[m
+Author: Ubuntu <ubuntu@ip-172-31-4-226.us-east-2.compute.internal>
+Date:   Tue Dec 8 10:49:36 2020 +0000
+
+    create_kinemania3
