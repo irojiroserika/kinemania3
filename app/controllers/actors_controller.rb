@@ -32,11 +32,11 @@ class ActorsController < ApplicationController
     @actor = Actor.find_by(id: params[:id])
     @actor.name = params[:name]
     #以下activestrageを使用するため無効化
-    #if params[:image_name]
-     # @actor.image_name = "#{@actor.id}.jpg"
-     # image_name = params[:image_name]
-     # File.binwrite("public/actor_images/#{@actor.image_name}", image_name.read)
-   # end
+    if params[:image_name]
+      @actor.image_name = "#{@actor.id}.jpg"
+      image_name = params[:image_name]
+      File.binwrite("public/actor_images/#{@actor.image_name}", image_name.read)
+    end
    #ここまで
     if @actor.save
       flash[:notice] = "出演者の名前を編集しました"

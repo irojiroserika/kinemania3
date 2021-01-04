@@ -2,7 +2,7 @@
 
 <%= form_tag("/actors/#{@actor.id}/update",{multipart: true}) do %>
   <textarea name ="name"><%= @actor.name %></textarea>
-  
+  <input name ="image_name" type = "file"></textarea>
   <input type="submit" value="更新">
 <% end %>
 <br>
