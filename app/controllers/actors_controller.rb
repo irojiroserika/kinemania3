@@ -14,7 +14,7 @@ class ActorsController < ApplicationController
   end
     
   def create
-    @actor = Actor.new(name: params[:name],image_name: "default_actor_image.jpg")
+    @actor = Actor.new(name: params[:name])
     @content =Content.find_by(id: params[:id])
     @actor.contents << @content
     if @actor.save

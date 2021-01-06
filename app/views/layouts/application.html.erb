@@ -16,20 +16,39 @@
         <%= link_to("kinemania", "/") %>
       </div>
       <ul class="header-menus">
+        
+        <% if @current_user %>
+          <% if @current_user.name == "irojiroserika" or "admin" %>
+            <li>
+              あなたは編集を許可されたユーザーです
+            </li>
+          <% end %>
+         <li>
+          現在ログインしているユーザーの名前:
+          <%= @current_user.name %>
+        <li>
+          <%= link_to("映画登録", "/contents/new") %>
+        </li>
+        <li>
+          <%= link_to("ログアウト", "/logout", {method: :post}) %>
+        </li>
+        <% else %>
+          <li>
+          <%= link_to("ログイン", "/login") %>
+        </li>
         <li>
           <%= link_to("ユーザー作成", "/users/new") %>
+        </li>
+        <% end %>
         </li>
         <li>
           <%= link_to("ユーザー一覧", "/users/index") %>
         </li>
         <li>
-          <%= link_to("映画一覧", "/contents/index") %>
+          <%= link_to("視聴済み作品一覧", "/contents/index") %>
         </li>
         <li>
-          <%= link_to("映画登録", "/contents/new") %>
-        </li>
-        <li>
-          <%= link_to("出演者一覧", "/actors/index") %>
+          <%= link_to("キャスト一覧", "/actors/index") %>
         </li>
       </ul>
     </header>

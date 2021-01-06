@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
+      # ページ => コントローラー#アクション
+  
   get 'users/new'  => "users#new"
   post "users/create" => "users#create"
   get "users/index" => "users#index"
+  post "login" => "users#login"
+  get "login" => "users#login_form"
+  post "logout" => "users#logout"
   
   get 'actors/index'
   post "actors/new" => "actors#new"

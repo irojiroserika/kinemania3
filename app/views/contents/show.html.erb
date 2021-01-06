@@ -18,11 +18,11 @@
       
       <table border="2">
   <tr>
-    <th>出演者ID</th><th>出演者</th><th>画像</th>
+    <th>出演者ID</th><th>出演者</th>
   </tr>
   <% @content.actors.each do |actor| %>
   <tr>
-    <td><%= actor.id %></td><td><%= link_to(actor.name, "/actors/#{actor.id}") %></td><td><img src="<%= "/actor_images/#{actor.image_name}" %>" width="200" height="auto"></td>
+    <td><%= actor.id %></td><td><%= link_to(actor.name, "/actors/#{actor.id}") %></td>
   </tr>
  
   <% end %>
