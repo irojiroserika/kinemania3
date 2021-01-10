@@ -1,0 +1,8 @@
+ユーザーの詳細ページ
+<h1><%= link_to(@user.name, "/users/#{@user.id}") %></h1>
+
+<%= form_tag("/users/#{@user.id}/update",{multipart: true}) do %>
+  <textarea name ="name"><%= @user.name %></textarea>
+  <input type="submit" value="更新">
+<% end %>
+<%= link_to("削除", "/users/#{@user.id}/destroy",{method: "post"}) %>
