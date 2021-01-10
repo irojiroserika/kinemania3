@@ -1,6 +1,6 @@
 class ContentsController < ApplicationController
   before_action :authenticate_user,{only: [:new,:edit,:update,:create,:destroy]}
-  before_action :isolate_user,{only: [:new,:edit,:update,:create,:destroy]}
+  #before_action :isolate_user,{only: [:new,:edit,:update,:create,:destroy]}
   
   
   def index

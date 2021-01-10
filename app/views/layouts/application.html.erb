@@ -18,9 +18,17 @@
       <ul class="header-menus">
         
         <% if @current_user %>
-          <% if @current_user.name == "irojiroserika" or "admin" %>
+          <% if @current_user.name =="irojiroserika"%>
             <li>
               あなたは編集を許可されたユーザーです
+            </li>
+          <% elsif @current_user.name =="admin"%>
+            <li>
+              あなたは編集を許可されたユーザーです
+            </li>
+          <% else %>
+            <li>
+              あなたは編集を許可されていないユーザーです
             </li>
           <% end %>
          <li>

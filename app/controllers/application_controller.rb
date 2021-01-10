@@ -7,17 +7,19 @@ def set_current_user
 end
 
 def authenticate_user
-  if @current_user == nil
+  if @current_user == nil 
     flash[:notice] = "ログインが必要です"
     redirect_to("/login")
-  end 
-end
-
-def isolate_user
-  if @current_user.name  !=  "irojiroserika" or "admin"
+  elsif @current_user.name =="irojiroserika"
+  elsif @current_user.name =="admin"
+  else
     flash[:notice] = "あなたは編集ができません"
     redirect_to("/login")
   end
+  
 end
+
+
+
 
 end
