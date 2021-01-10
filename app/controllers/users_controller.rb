@@ -49,6 +49,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(name: params[:name],email: params[:email])
     if @user.save
+      session[:user_id] = @user.id
       redirect_to("/contents/index")
     else
       
