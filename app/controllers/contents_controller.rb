@@ -28,6 +28,8 @@ class ContentsController < ApplicationController
   def update
     @content = Content.find_by(id: params[:id])
     @content.name = params[:name]
+    @content.watchedday = params[:watchedday]
+    
     if @content.save
       flash[:notice] = "作品を編集しました"
       redirect_to("/contents/index")
@@ -35,6 +37,12 @@ class ContentsController < ApplicationController
       @content = Content.find_by(id: params[:id])
       render("contents/edit")
     end
+  end
+  
+  def destroy
+    @content = Content.find_by(id: params[:id])
+    @content.destroy
+    render("home/top")
   end
   
 end

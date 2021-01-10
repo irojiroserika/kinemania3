@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   post "contents/create" => "contents#create"
   get "contents/:id" => "contents#show"
   post "contents/:id/update" => "contents#update"
+  post "contents/:id/destroy" => "contents#destroy"
   
   
   

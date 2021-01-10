@@ -13,6 +13,7 @@ class UsersController < ApplicationController
       flash[:notice] = "ログインしました"
       redirect_to("/contents/index")
     else
+      flash[:notice] = "ログインできませんでした"
       render("users/login_form")
     end
   end
@@ -28,13 +29,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(name: params[:name],email: params[:email])
     if @user.save
-        if @user.name = "irojiroserika"
-         redirect_to("/contents/index")
-        else
-          redirect_to("/home/top")
-        end
       redirect_to("/contents/index")
     else
+      
       redirect_to("/users/new")
     end
     

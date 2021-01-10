@@ -1,10 +1,13 @@
 <h1>編集画面</h1>
-
+<h1>作品名</h1>
+<h2><%= @content.name %></h2>
 <% @content.errors.full_messages.each do |message| %>
   <%= message %>
 <% end %>
 
 <%= form_tag("/contents/#{@content.id}/update") do %>
   <textarea name ="name"><%= @content.name %></textarea>
+  <br>
+  <input name ="watchedday" type = "date"><%= @content.watchedday %></input>
   <input type="submit" value="更新">
 <% end %>

@@ -10,12 +10,16 @@
   <input type="submit" value="Cast登録" >
 <% end %>
 <br>
-<%= @content.name %>
-
+<h1>作品名</h1>
+<h2><%= @content.name %></h2>
 <br>
+<h1>視聴日</h1>
+<h2><%= @content.watchedday %></h2>
 
-      
-      
+
+
+<%= link_to("作品名と視聴日の編集","/contents/#{@content.id}/edit") %>
+<%= link_to("削除", "/contents/#{@content.id}/destroy",{method: "post"}) %>
       <table border="2">
   <tr>
     <th>出演者ID</th><th>出演者</th>
@@ -28,7 +32,7 @@
   <% end %>
 </table>
 
-<%= link_to("作品名の編集","/contents/#{@content.id}/edit") %>
+
 
 
 
