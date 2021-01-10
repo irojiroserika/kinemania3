@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get "actors/:id" => "actors#show"
   get "actors/:id/edit" => "actors#edit"
   post "actors/:id/update" => "actors#update"
+  post "actors/:id/destroy" => "actors#destroy"
   
   get 'contents/index' => "contents#index"
   get "contents/new" => "contents#new"

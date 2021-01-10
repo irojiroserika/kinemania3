@@ -4,7 +4,5 @@
 
 <%= form_for("/actors/#{@actor.id}/update",{multipart: true}) do |f| %>
   <h2>画像q</h2>
-  
-  <%= f.label "画像をアップロード" %><br><%= f.file_field :image_name %>
   <input type="submit" value="更新">
 <% end %>

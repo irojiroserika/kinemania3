@@ -1,5 +1,6 @@
 class ActorsController < ApplicationController
-
+  before_action :authenticate_user,{only: [:new,:edit,:update,:create,:destroy]}
+  before_action :isolate_user,{only: [:new,:edit,:update,:create,:destroy]}
   
   def index
     @actors = Actor.all
@@ -45,6 +46,12 @@ class ActorsController < ApplicationController
       @content = Actor.find_by(id: params[:id])
       render("actors/edit")
     end
+  end
+  
+  def destroy
+    @actor = Actor.find_by(id: params[:id])
+    @actor.destroy
+    render("home/top")
   end
   
  
