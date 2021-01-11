@@ -3,7 +3,7 @@ class ActorsController < ApplicationController
   #before_action :isolate_user,{only: [:new,:edit,:update,:create,:destroy]}
   
   def index
-    @actors = Actor.all
+    @actors = Actor.joins(:content_actors).group(:actor_id).order("count(content_id) desc")
   end
   
   def show
