@@ -22,11 +22,11 @@
 <%= link_to("削除", "/contents/#{@content.id}/destroy",{method: "post"}) %>
       <table border="2">
   <tr>
-    <th>出演者ID</th><th>出演者</th>
+    <th>出演者ID</th><th>出演者</th><th>出演回数</th>
   </tr>
   <% @content.actors.each do |actor| %>
   <tr>
-    <td><%= actor.id %></td><td><%= link_to(actor.name, "/actors/#{actor.id}") %></td>
+    <td><%= actor.id %></td><td><%= link_to(actor.name, "/actors/#{actor.id}") %></td><td><%= actor.contents.count %></td>
   </tr>
  
   <% end %>
